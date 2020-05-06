@@ -4,16 +4,11 @@ using System.Text;
 
 namespace Challenges
 {
-    class ArrayReverse
+    public class ArrayReverse
     {
-        static void Main(string[] args)
+        public static int[] ReverseArray(int[] array)
         {
             int[] arr = new int[5] { 1, 2, 3, 4, 5 };
-            /* for (int i = arr.Length -1; i >= 0; i--)
-             * {
-             *      Console.Write(arr[i]);
-             * }
-             */
             int length = arr.Length - 1;
             string strReverse = null;
 
@@ -22,9 +17,8 @@ namespace Challenges
                 strReverse = strReverse + arr[length];
                 length--;
             }
-            Console.WriteLine();
-            Console.WriteLine("Reverse Array is " + " " + strReverse);
-            Console.ReadLine();
+
+            return strReverse;
         }
     }
 }
