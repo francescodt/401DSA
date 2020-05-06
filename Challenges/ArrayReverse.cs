@@ -8,17 +8,14 @@ namespace Challenges
     {
         public static int[] ReverseArray(int[] array)
         {
-            int[] arr = new int[5] { 1, 2, 3, 4, 5 };
-            int length = arr.Length - 1;
-            string strReverse = null;
+            int[] reverseArray = new int[array.Length];
 
-            while (length >= 0)
+            for (int i = 0; i < array.Length; i++)
             {
-                strReverse = strReverse + arr[length];
-                length--;
+                reverseArray[i] = array[array.Length - (1 + i)];
             }
 
-            return strReverse;
+            return reverseArray;
         }
     }
 }
