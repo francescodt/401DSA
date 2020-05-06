@@ -11,7 +11,7 @@ namespace Challenge
         [InlineData(new[] { 1, 2, 3, 4 }, new[] { 4, 3, 2, 1})]
         public void Can_reverse_array_of_numbers(int[] input, int[] expected)
         {
-            int[] result = Challenges.ArrayReverse.ReverseArray(input);
+            int[] result = Challenges.Array.ArrayReverse.ReverseArray(input);
 
             Assert.Equal(expected, result);
 
