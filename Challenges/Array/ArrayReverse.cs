@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace Challenges.Array
+﻿namespace Challenges.Array
 {
     public class ArrayReverse
     {
