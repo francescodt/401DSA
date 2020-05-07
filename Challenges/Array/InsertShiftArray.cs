@@ -1,10 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace Challenges.Array
+﻿namespace Challenges.Array
 {
-     public class InsertShiftArray
+    public class InsertShiftArray
     {
         public static int[] ArrayShift(int[] array, int valueToInsert)
         {
