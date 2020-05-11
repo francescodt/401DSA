@@ -1,4 +1,6 @@
 using System;
+using System.Collections.Generic;
+using DataStructures;
 using Xunit;
 
 namespace DataStructures.Tests
@@ -6,9 +8,14 @@ namespace DataStructures.Tests
     public class LinkedListsTests
     {
         [Fact]
-        public void Test1()
+        public void EmptyListInstantiate()
         {
+            LinkedList list = new LinkedList();
+
+            Assert.Equal("", list.ToString());
 
         }
     }
+
+
 }
