@@ -50,7 +50,16 @@ namespace DataStructures.Tests
             Assert.Equal("{ 12 } -> Null", list.ToString());
         }
 
+        [Fact]
+        public void InsertMultipleNodes()
+        {
+            LinkedList list = new LinkedList();
 
+            list.Insert(5);
+            list.Insert(10);
+
+            Assert.Equal("{ 10 } -> { 5 } -> Null", list.ToString());
+        }
     }
 
 
