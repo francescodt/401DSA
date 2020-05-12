@@ -72,7 +72,32 @@ namespace DataStructures
             {
                 return false;
             }
+
+
             
+        }
+    }
+
+    public void InsertBefore(int value, int newValue)
+    {
+        if (Head.Value == value)
+        {
+            Include(newValue);
+            return;
+        }
+
+        Node newNode = new Node(newValue);
+
+        Node current = Head;
+        while (current != null)
+        {
+            if (current.Next.Value == value)
+            {
+                newNode.Next = current.Next;
+                current.Next = newNode;
+                return;
+            }
+            current = current.Next;
         }
     }
 
