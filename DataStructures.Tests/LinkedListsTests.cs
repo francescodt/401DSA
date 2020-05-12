@@ -15,6 +15,86 @@ namespace DataStructures.Tests
             Assert.Equal("", list.ToString());
 
         }
+
+        [Fact]
+        public void CreateEmptyList()
+        {
+            //Arrange
+
+
+            // Act
+            LinkedList testList = new LinkedList();
+
+            //Assert
+            Assert.NotNull(testList);
+        }
+
+        [Fact]
+        public void LinkedListInsert()
+        {
+            LinkedList insertToLinkedList = new LinkedList();
+
+            insertToLinkedList.Insert(12);
+
+            Assert.Equal(12, insertToLinkedList.Head.Value);
+
+        }
+
+        [Fact]
+        public void InsertOneNode()
+        {
+            LinkedList list = new LinkedList();
+
+            list.Insert(12);
+
+            Assert.Equal("{ 12 } -> Null", list.ToString());
+        }
+
+        [Fact]
+        public void InsertMultipleNodes()
+        {
+            LinkedList list = new LinkedList();
+
+            list.Insert(5);
+            list.Insert(10);
+
+            Assert.Equal("{ 10 } -> { 5 } -> Null", list.ToString());
+        }
+
+        [Fact]
+        public void DoesItExist()
+        {
+            LinkedList list = new LinkedList();
+
+            list.Insert(5);
+            list.Insert(10);
+
+            Assert.True(list.Include(10));
+        }
+
+        [Fact]
+        public void DoesItNotExist()
+        {
+            LinkedList list = new LinkedList();
+
+            list.Insert(5);
+            list.Insert(10);
+
+            Assert.False(list.Include(9));
+        }
+
+        [Fact]
+        public void InsertBeforeFirstNode()
+        {
+            LinkedList list = new LinkedList();
+
+            list.Insert(1);
+
+            list.InsertBefore(1, 5);
+
+            Assert.Equal(5, list.Head.Value);
+        }
+
     }
 
 

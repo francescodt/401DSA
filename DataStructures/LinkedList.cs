@@ -49,9 +49,9 @@ namespace DataStructures
             }
         }
 
-        public bool Includes(int value)
+        public bool Include(int value)
         {
-            if(Head == null)
+            if(Head != null)
             {
                 Node current = Head;
 
@@ -81,14 +81,14 @@ namespace DataStructures
         {
             if (Head.Value == value)
             {
-                Includes(newValue);
+                Insert(newValue);
                 return;
             }
 
             Node newNode = new Node(newValue);
 
             Node current = Head;
-            while (current != null)
+            while (current.Next != null)
             {
                 if (current.Next.Value == value)
                 {
