@@ -60,6 +60,28 @@ namespace DataStructures.Tests
 
             Assert.Equal("{ 10 } -> { 5 } -> Null", list.ToString());
         }
+
+        [Fact]
+        public void DoesItExist()
+        {
+            LinkedList list = new LinkedList();
+
+            list.Insert(5);
+            list.Insert(10);
+
+            Assert.True(list.Include(10));
+        }
+
+        [Fact]
+        public void DoesItNotExist()
+        {
+            LinkedList list = new LinkedList();
+
+            list.Insert(5);
+            list.Insert(10);
+
+            Assert.False(list.Include(9));
+        }
     }
 
 

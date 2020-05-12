@@ -51,7 +51,7 @@ namespace DataStructures
 
         public bool Include(int value)
         {
-            if(Head == null)
+            if(Head != null)
             {
                 Node current = Head;
 
