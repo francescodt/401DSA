@@ -15,6 +15,19 @@ namespace DataStructures.Tests
             Assert.Equal("", list.ToString());
 
         }
+
+        [Fact]
+        public void CreateEmptyList()
+        {
+            //Arrange
+
+
+            // Act
+            LinkedList testList = new LinkedList();
+
+            //Assert
+            Assert.NotNull(testList);
+        }
     }
 
 
