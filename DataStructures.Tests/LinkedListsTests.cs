@@ -28,6 +28,29 @@ namespace DataStructures.Tests
             //Assert
             Assert.NotNull(testList);
         }
+
+        [Fact]
+        public void LinkedListInsert()
+        {
+            LinkedList insertToLinkedList = new LinkedList();
+
+            insertToLinkedList.Insert(12);
+
+            Assert.Equal(12, insertToLinkedList.Head.Value);
+
+        }
+
+        [Fact]
+        public void InsertOneNode()
+        {
+            LinkedList list = new LinkedList();
+
+            list.Insert(12);
+
+            Assert.Equal("{ 12 } -> Null", list.ToString());
+        }
+
+
     }
 
 

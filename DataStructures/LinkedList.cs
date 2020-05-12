@@ -49,7 +49,7 @@ namespace DataStructures
             }
         }
 
-        public bool Includes(int value)
+        public bool Include(int value)
         {
             if(Head == null)
             {
@@ -81,7 +81,7 @@ namespace DataStructures
         {
             if (Head.Value == value)
             {
-                Includes(newValue);
+                Include(newValue);
                 return;
             }
 
