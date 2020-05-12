@@ -81,14 +81,14 @@ namespace DataStructures
         {
             if (Head.Value == value)
             {
-                Include(newValue);
+                Insert(newValue);
                 return;
             }
 
             Node newNode = new Node(newValue);
 
             Node current = Head;
-            while (current != null)
+            while (current.Next != null)
             {
                 if (current.Next.Value == value)
                 {
