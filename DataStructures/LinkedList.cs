@@ -57,7 +57,7 @@ namespace DataStructures
 
                 while (current != null)
                 {
-                    if (current.Data == value)
+                    if (current.Value == value)
                     {
                         return true;
                     }
@@ -76,59 +76,61 @@ namespace DataStructures
 
             
         }
-    }
 
-    public void InsertBefore(int value, int newValue)
-    {
-        if (Head.Value == value)
+        public void InsertBefore(int value, int newValue)
         {
-            Include(newValue);
-            return;
-        }
-
-        Node newNode = new Node(newValue);
-
-        Node current = Head;
-        while (current != null)
-        {
-            if (current.Next.Value == value)
+            if (Head.Value == value)
             {
-                newNode.Next = current.Next;
-                current.Next = newNode;
+                Includes(newValue);
                 return;
             }
-            current = current.Next;
-        }
-    }
 
-    public void InsertAfter(int value, int newValue)
-    {
-        Node newNode = new Node(newValue);
+            Node newNode = new Node(newValue);
 
-        Node current = Head;
-        while (current != null)
-        {
-            if (current.Value == value)
+            Node current = Head;
+            while (current != null)
             {
-                newNode.Next = current.Next;
-                current.Next = newNode;
-                return;
+                if (current.Next.Value == value)
+                {
+                    newNode.Next = current.Next;
+                    current.Next = newNode;
+                    return;
+                }
+                current = current.Next;
             }
-            current = current.Next;
+        }
+
+        public void InsertAfter(int value, int newValue)
+        {
+            Node newNode = new Node(newValue);
+
+            Node current = Head;
+            while (current != null)
+            {
+                if (current.Value == value)
+                {
+                    newNode.Next = current.Next;
+                    current.Next = newNode;
+                    return;
+                }
+                current = current.Next;
+            }
         }
     }
+
+    
 
     public class Node
     {
-        public int Data { get; set; }
+        public int Value { get; set; }
         public Node Next { get; set; }
         public override string ToString()
         {
-            return Data.ToString();
+            return Value.ToString();
         }
         public Node(int value)
         {
-            Data = value;
+            Value = value;
             Next = null;
         }
     }
