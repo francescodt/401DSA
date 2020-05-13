@@ -99,9 +99,19 @@ namespace DataStructures.Tests
 
         //skip a few one-hundred
         [Fact]
-        public void NthGreaterThanList()
+        public void KFromEnd() 
         {
-            
+            LinkedList list = new LinkedList();
+            list.Insert(14);
+            list.Insert(44);
+            list.Insert(55);
+            list.Insert(1);
+
+            int userInput = 2;
+
+            int num = list.KthFromEnd(userInput);
+
+            Assert.Equal(55, num);
         }
 
     }
