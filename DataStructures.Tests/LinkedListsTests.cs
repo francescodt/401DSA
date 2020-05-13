@@ -95,6 +95,15 @@ namespace DataStructures.Tests
             Assert.Equal(5, list.Head.Value);
         }
 
+
+
+        //skip a few one-hundred
+        [Fact]
+        public void NthGreaterThanList()
+        {
+            
+        }
+
     }
 
 
