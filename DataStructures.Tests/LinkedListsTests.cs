@@ -106,6 +106,7 @@ namespace DataStructures.Tests
             list.Insert(44);
             list.Insert(55);
             list.Insert(1);
+            list.Insert(99);
 
 
             Assert.Equal(55, list.KthFromEnd(2));
@@ -120,6 +121,24 @@ namespace DataStructures.Tests
 
 
             Assert.Equal(10, list.KthFromEnd(0));
+        }
+
+        [Fact]
+        public void KIsNegative()
+        {
+            LinkedList list = new LinkedList();
+            list.Insert(14);
+            list.Insert(44);
+            list.Insert(55);
+            list.Insert(1);
+            list.Insert(99);
+
+            Assert.Throws<IndexOutOfRangeException>(() =>
+            {
+                int actually = list.KthFromEnd(-40);
+            });
+
+
         }
 
     }

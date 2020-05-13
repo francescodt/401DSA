@@ -131,14 +131,17 @@ namespace DataStructures
 
             int idx = len - 1;
             current = Head;
-            if (index > idx || idx < 0)
+
+            if (index > idx || index < 0)
             {
                 throw new IndexOutOfRangeException("Try choosing a number that actually matters.");
             }
+
             for (int i = idx; i > index; i--)
             {
                 current = current.Next;
             }
+
             k = current.Value;
             return k;
         }
