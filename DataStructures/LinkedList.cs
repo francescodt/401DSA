@@ -38,6 +38,7 @@ namespace DataStructures
 
         public void Insert(int value)
         {
+
             if(Head == null)
             {
                 Head = new Node(value);
