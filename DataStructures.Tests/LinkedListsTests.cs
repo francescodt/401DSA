@@ -107,11 +107,19 @@ namespace DataStructures.Tests
             list.Insert(55);
             list.Insert(1);
 
-            int userInput = 2;
 
-            int num = list.KthFromEnd(userInput);
+            Assert.Equal(55, list.KthFromEnd(2));
+        }
 
-            Assert.Equal(55, num);
+        [Fact]
+        public void KIsOne()
+        {
+            LinkedList list = new LinkedList();
+            list.Insert(10);
+
+
+
+            Assert.Equal(10, list.KthFromEnd(0));
         }
 
     }
