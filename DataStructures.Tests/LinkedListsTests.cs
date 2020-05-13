@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.Security.Cryptography;
 using DataStructures;
 using Xunit;
 
@@ -113,7 +114,7 @@ namespace DataStructures.Tests
         }
 
         [Fact]
-        public void KIsOne()
+        public void KIsZeroWhichIsActuallyTheEnd()
         {
             LinkedList list = new LinkedList();
             list.Insert(10);
@@ -139,6 +140,22 @@ namespace DataStructures.Tests
             });
 
 
+        }
+
+        [Fact]
+        public void KIsBiggerThanTheList()
+        {
+            LinkedList list = new LinkedList();
+            list.Insert(14);
+            list.Insert(44);
+            list.Insert(55);
+            list.Insert(1);
+            list.Insert(99);
+
+            Assert.Throws<IndexOutOfRangeException>(() =>
+            {
+                int actually = list.KthFromEnd(6);
+            });
         }
 
     }
