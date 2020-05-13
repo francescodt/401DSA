@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.Security.Cryptography;
 using DataStructures;
 using Xunit;
 
@@ -99,9 +100,62 @@ namespace DataStructures.Tests
 
         //skip a few one-hundred
         [Fact]
-        public void NthGreaterThanList()
+        public void KFromEnd() 
         {
-            
+            LinkedList list = new LinkedList();
+            list.Insert(14);
+            list.Insert(44);
+            list.Insert(55);
+            list.Insert(1);
+            list.Insert(99);
+
+
+            Assert.Equal(55, list.KthFromEnd(2));
+        }
+
+        [Fact]
+        public void KIsZeroWhichIsActuallyTheEnd()
+        {
+            LinkedList list = new LinkedList();
+            list.Insert(10);
+
+
+
+            Assert.Equal(10, list.KthFromEnd(0));
+        }
+
+        [Fact]
+        public void KIsNegative()
+        {
+            LinkedList list = new LinkedList();
+            list.Insert(14);
+            list.Insert(44);
+            list.Insert(55);
+            list.Insert(1);
+            list.Insert(99);
+
+            Assert.Throws<IndexOutOfRangeException>(() =>
+            {
+                int actually = list.KthFromEnd(-40);
+            });
+
+
+        }
+
+        [Fact]
+        public void KIsBiggerThanTheList()
+        {
+            LinkedList list = new LinkedList();
+            list.Insert(14);
+            list.Insert(44);
+            list.Insert(55);
+            list.Insert(1);
+            list.Insert(99);
+
+            Assert.Throws<IndexOutOfRangeException>(() =>
+            {
+                int actually = list.KthFromEnd(6);
+            });
         }
 
     }
