@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Xml.Schema;
 
 namespace DataStructures
 {
@@ -115,6 +116,31 @@ namespace DataStructures
                 }
                 current = current.Next;
             }
+        }
+
+        public int KthFromEnd(int index)
+        {
+            int len = 0;
+            int k = 0;
+            Node current = Head;
+            while (current != null)
+            {
+                current = current.Next;
+                len++;
+            }
+
+            int idx = len - 1;
+            current = Head;
+            if (index > idx || idx < 0)
+            {
+                throw new IndexOutOfRangeException("Try choosing a number that actually matters.");
+            }
+            for (int i = idx; i > index; i--)
+            {
+                current = current.Next;
+            }
+            k = current.Value;
+            return k;
         }
     }
 
