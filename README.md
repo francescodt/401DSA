@@ -27,3 +27,9 @@ Write a function called reverseArray which takes an array as an argument. Withou
 
 ### White Boarding
 [Covering the Problem Domain, a visual, psuedo code, and the algorithm](assets/NthFromEnd.jpg)
+
+
+## Merge Lists
+
+##White Boarding
+[Covering the Problem Domain, a visual, psuedo code, and the algorithm](assets/mergelists.jpg)
