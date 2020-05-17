@@ -159,25 +159,7 @@ namespace DataStructures.Tests
         }
 
 
-        [Fact]
-        public void CanTheListMerge()
-        {
-            LinkedList list1 = new LinkedList();
-            list1.Insert(1);
-            list1.Insert(3);
-            list1.Insert(2);
-
-            LinkedList list2 = new LinkedList();
-            list2.Insert(5);
-            list2.Insert(9);
-            list2.Insert(4);
-
-            string expected = "{ 1 } -> { 5 } -> { 3 } -> { 9 } -> { 2 } -> { 4 } -> Null";
-
-            string actual = LinkedList.MergeList(list1, list2);
-
-            Assert.Equal(expected, actual);
-        }
+        
 
     }
 
