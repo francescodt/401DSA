@@ -21,7 +21,26 @@ namespace DataStructures.Stack
 
         public T Pop(T value)
         {
-            return value;
+            if (top == null)
+            {
+                throw new StackEmptyException();
+
+            }
+
+            Node emptySpot = top;
+
+            if (top.Next == null)
+            {
+                top = null;
+                emptySpot.Next = null;
+
+                return emptySpot.Value;
+            }
+
+            top = top.Next;
+            emptySpot.Next = null;
+
+            return emptySpot.Value;
         }
 
         public T Peek()
