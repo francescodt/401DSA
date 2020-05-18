@@ -9,7 +9,7 @@ namespace Challenges.Tests
     public class LinkedListTests
     {
 
-        [Fact]
+        /*[Fact]
         public void CanTheListMerge()
         {
             LinkedList list1 = new LinkedList();
@@ -33,7 +33,7 @@ namespace Challenges.Tests
             string expected = "{ 1 } -> { 5 } -> { 3 } -> { 9 } -> { 2 } -> { 4 } -> Null";
 
             Assert.Equal(expected, MergedList.ToString());
-        }
+        } */
     }
 
    
