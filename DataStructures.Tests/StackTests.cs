@@ -63,6 +63,7 @@ namespace DataStructures.Tests.StackTests
             bool result = testStack.IsEmpty();
 
             Assert.False(result);
+
         }
 
     }
