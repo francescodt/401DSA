@@ -43,7 +43,7 @@ namespace DataStructures.Stack
             return emptySpot.Value;
         }
 
-        public T Peek()
+        public T Pop()
         {
             if (top == null)
                 throw new StackEmptyException();

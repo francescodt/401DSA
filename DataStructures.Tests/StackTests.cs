@@ -26,10 +26,24 @@ namespace DataStructures.Tests.StackTests
             testStack.Push(3);
             testStack.Push(4);
 
-            int result = testStack.Peek();
+            int result = testStack.Pop();
 
             Assert.Equal(4, result);
         }
+
+        [Fact]
+        public void CanPopAStack()
+        {
+            Stacks<int> testStack = new Stacks<int>();
+            testStack.Push(3);
+            testStack.Push(4);
+
+            int result = testStack.Pop();
+
+            Assert.Equal(4, result);
+        }
+
+        
 
     }
 }
