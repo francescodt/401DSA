@@ -53,7 +53,12 @@ namespace DataStructures.Stack
 
         public bool IsEmpty()
         {
-            return default;
+            if (top == null)
+            {
+                return true;
+            }
+
+            return false;
         }
         
         
