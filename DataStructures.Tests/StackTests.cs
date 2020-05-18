@@ -54,5 +54,16 @@ namespace DataStructures.Tests.StackTests
             });
         }
 
+        [Fact]
+        public void IsEmptyReturnsFalseWhenNotEmpty()
+        {
+            Stacks<int> testStack = new Stacks<int>();
+            testStack.Push(4);
+
+            bool result = testStack.IsEmpty();
+
+            Assert.False(result);
+        }
+
     }
 }
