@@ -1,12 +1,22 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Text;
 using Xunit;
+using DataStructures.Stack;
 
-namespace DataStructures.Tests
+namespace DataStructures.Tests.StackTests
 {
-    class StackTests
+    public class StackTests
     {
+        
+        [Fact]
+        public void CanPushOnAStack()
+        {
+            Stacks<int> testStack = new Stacks<int>();
+
+            int result = testStack.Push(5);
+
+            Assert.Equal(5, result);
+        }
 
     }
 }
