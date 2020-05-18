@@ -26,7 +26,7 @@ namespace DataStructures.Tests.StackTests
             testStack.Push(3);
             testStack.Push(4);
 
-            int result = testStack.Pop();
+            int result = testStack.Peek();
 
             Assert.Equal(4, result);
         }
@@ -38,12 +38,21 @@ namespace DataStructures.Tests.StackTests
             testStack.Push(3);
             testStack.Push(4);
 
-            int result = testStack.Pop();
+            int result = testStack.Peek();
 
             Assert.Equal(4, result);
         }
 
-        
+        [Fact]
+        public void PeekHasException()
+        {
+            Stacks<int> testStack = new Stacks<int>();
+
+            Assert.Throws<StackEmptyException>(() =>
+            {
+                testStack.Peek();
+            });
+        }
 
     }
 }
