@@ -7,5 +7,6 @@ namespace DataStructures.Tests
 {
     class StackTests
     {
+
     }
 }
