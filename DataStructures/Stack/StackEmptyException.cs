@@ -4,7 +4,14 @@ using System.Text;
 
 namespace DataStructures.Stack
 {
-    class StackEmptyException
+    public class StackEmptyException : Exception
     {
+
+        public StackEmptyException()
+        {
+            string message = "Nope.";
+            Console.WriteLine(message);
+        }
+
     }
 }
