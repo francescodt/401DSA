@@ -9,7 +9,6 @@ namespace Challenges.Tests
     public class LinkedListTests
     {
 
-        
     }
 
    
