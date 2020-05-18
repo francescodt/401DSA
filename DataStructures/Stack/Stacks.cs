@@ -45,7 +45,10 @@ namespace DataStructures.Stack
 
         public T Peek()
         {
-            return default;
+            if (top == null)
+                throw new StackEmptyException();
+
+            return top.Value;
         }
 
         public bool IsEmpty()
