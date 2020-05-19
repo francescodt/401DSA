@@ -24,6 +24,21 @@ namespace DataStructures.Queue
             return rear.Value;
         }
 
+        public T Dequeue()
+        {
+            if (front == null)
+                throw new QueueEmptyException();
+
+            Node emptySpot = front;
+            front = front.Next;
+            emptySpot.Next = null;
+
+            if (front == null)
+                rear = null;
+
+            return emptySpot.Value;
+        }
+
         public class Node
         {
             public Node(T value)
