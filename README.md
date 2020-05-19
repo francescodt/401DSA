@@ -31,5 +31,11 @@ Write a function called reverseArray which takes an array as an argument. Withou
 
 ## Merge Lists
 
-##White Boarding
+### White Boarding
 [Covering the Problem Domain, a visual, psuedo code, and the algorithm](assets/mergelists.jpg)
+
+
+## Stacking with as a Queue
+
+### White Boarding
+[Covering the Problem Domain, a visual, psuedo code, and the algorithm](assets/1Queue2Stacksthoughts.png)

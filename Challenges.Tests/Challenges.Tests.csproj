@@ -7,11 +7,11 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Compile Remove="QueueStacks\PsuedoQueue.Tests.cs" />
+    <Compile Remove="QueueStacks\PsuedoQueueTests.cs" />
   </ItemGroup>
 
   <ItemGroup>
-    <None Include="QueueStacks\PsuedoQueue.Tests.cs" />
+    <None Include="QueueStacks\PsuedoQueueTests.cs" />
   </ItemGroup>
 
   <ItemGroup>
