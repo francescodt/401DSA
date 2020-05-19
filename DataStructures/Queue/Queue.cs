@@ -39,6 +39,23 @@ namespace DataStructures.Queue
             return emptySpot.Value;
         }
 
+        public T Peek()
+        {
+            if (front == null)
+                throw new QueueEmptyException();
+
+            return front.Value;
+        }
+
+        public bool IsEmpty()
+        {
+            if (front == null)
+            {
+                return true;
+            }
+            return false;
+        }
+
         public class Node
         {
             public Node(T value)
