@@ -67,6 +67,7 @@ namespace DataStructures.Queue
             public T Value { get; set; }
             public Node Next { get; set; }
 
+
         }
         
     }
