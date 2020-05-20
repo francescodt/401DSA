@@ -19,7 +19,7 @@ namespace DataStructures.Stack
             return top.Value;
         }
 
-        public T Pop(T value)
+        public T Pop()
         {
             if (top == null)
             {
