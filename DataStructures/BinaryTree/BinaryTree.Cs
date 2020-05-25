@@ -10,7 +10,20 @@ namespace DataStructures.BinaryTree
 
         public IEnumerable<T> PreOrder(Node root)
         {
+            if (root == null)
+                yield break;
 
+            yield return root.Value;
+
+            foreach(T item in PreOrder(root.Left))
+            {
+                yield return item;
+            }
+
+            foreach (T item in PreOrder(root.Right))
+            {
+                yield return item;
+            }
         }
 
         public class Node
