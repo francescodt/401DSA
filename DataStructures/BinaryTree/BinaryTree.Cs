@@ -44,6 +44,26 @@ namespace DataStructures.BinaryTree
             }
         }
 
+        public IEnumerable<T> PostOrder(Node current)
+        {
+            if (current is null)
+                yield break;
+
+            foreach (T item in PostOrder(current.Left))
+            {
+                yield return item;
+            }
+
+            foreach (T item in PostOrder(current.Right))
+            {
+                yield return item;
+            }
+
+            yield return current.Value;
+        }
+
+
+
         public class Node
         {
             public T Value { get; set; }
