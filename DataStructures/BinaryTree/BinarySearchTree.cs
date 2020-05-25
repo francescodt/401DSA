@@ -45,5 +45,24 @@ namespace DataStructures.BinaryTree
                 
             }
         }
+
+        public bool Contains(Node root, T value)
+        {
+
+            while (root != null)
+            {
+                if (root.Value.Equals(value))
+                    return true;
+                else if (root.Value.CompareTo(value) > 0)
+                {
+                    return Contains(root.Left, value);
+                }
+                else
+                {
+                    return Contains(root.Right, value);
+                }
+            }
+            return false;
+        }
     }
 }
