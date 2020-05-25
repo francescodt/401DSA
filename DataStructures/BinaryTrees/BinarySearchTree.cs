@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Text;
 
-namespace DataStructures.BinaryTree
+namespace DataStructures.BinaryTrees
 {
     public class BinarySearchTree<T> : BinaryTree<T>
         where T : IComparable<T>

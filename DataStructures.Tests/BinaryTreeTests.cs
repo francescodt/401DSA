@@ -1,4 +1,4 @@
-﻿using DataStructures.BinaryTree;
+﻿using DataStructures.BinaryTrees;
 using System;
 using System.Collections;
 using System.Collections.Generic;
