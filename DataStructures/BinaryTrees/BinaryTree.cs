@@ -72,7 +72,8 @@ namespace DataStructures.BinaryTrees
 
             public Node (T value)
             {
-                Value = value;
+                this.Value = value;
+                
             }
         }
     }
