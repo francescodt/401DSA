@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Text;
+using System.Security.Cryptography.X509Certificates;
+using System.Text; 
 
 namespace DataStructures.BinaryTrees
 {
@@ -93,6 +94,8 @@ namespace DataStructures.BinaryTrees
             }
 
         }
+
+        
 
 
         public class Node

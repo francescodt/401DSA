@@ -57,6 +57,22 @@ namespace DataStructures.Tests
             Assert.True(newNode.Contains(newNode.Root.Right, 8));
             Assert.True(newNode.Contains(newNode.Root.Left.Left, 1));
         }
+
+       [Fact]
+       public void CanFindMax()
+        {
+            BinaryTree<int> newNode = new BinaryTree<int>();
+            newNode.Add(2);
+            newNode.Add(1);
+            newNode.Add(10);
+            newNode.Add(40);
+            newNode.Add(23);
+
+            newNode.GetMax();
+
+
+            
+        }
     }
 
     
