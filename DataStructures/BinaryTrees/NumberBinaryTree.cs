@@ -4,18 +4,23 @@ using System.Text;
 
 namespace DataStructures.BinaryTrees
 {
-    class NumberBinaryTree : BinaryTree<int>
+    public class NumberBinaryTree : BinarySearchTree<int>
     {
-        public int GetMax(Node node)
+        public int GetMax()
         {
-            if (node == null)
+            return GetMax(this.Root);
+        }
+
+        private int GetMax(Node current)
+        {
+            if (current == null)
             {
                 return int.MinValue;
             }
 
-            var result = node.Value;
-            var leftResult = GetMax(node.Left);
-            var rightResult = GetMax(node.Right);
+            var result = current.Value;
+            var leftResult = GetMax(current.Left);
+            var rightResult = GetMax(current.Right);
 
             if (leftResult > result)
             {

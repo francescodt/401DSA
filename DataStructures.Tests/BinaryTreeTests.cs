@@ -61,17 +61,15 @@ namespace DataStructures.Tests
        [Fact]
        public void CanFindMax()
         {
-            BinaryTree<int> newNode = new BinaryTree<int>();
+            NumberBinaryTree newNode = new NumberBinaryTree();
             newNode.Add(2);
             newNode.Add(1);
             newNode.Add(10);
             newNode.Add(40);
             newNode.Add(23);
+            int expected = 40;
 
-            newNode.GetMax();
-
-
-            
+            Assert.Equal(expected, newNode.GetMax());
         }
     }
 
