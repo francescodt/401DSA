@@ -62,6 +62,37 @@ namespace DataStructures.BinaryTrees
             yield return current.Value;
         }
 
+        public List<T> Breadth()
+        {
+            List<T> result = new List<T>();
+            Queue<Node> treeQueue = new Queue<Node>();
+            Node current = Root;
+            treeQueue.Enqueue(current);
+            Breadth(treeQueue, result, current);
+
+            return result;
+        }
+
+        public void Breadth(Queue<Node> treeQueue, List<T> result, Node current)
+        {
+            while (treeQueue.Peek() != null)
+            {
+                Node first = treeQueue.Dequeue();
+                result.Add(first.Value);
+
+                if (first.Left != null)
+                {
+                    treeQueue.Enqueue(first.Left);
+                }
+
+                if (first.Right != null)
+                {
+                    treeQueue.Enqueue(first.Right);
+                }
+
+            }
+
+        }
 
 
         public class Node
