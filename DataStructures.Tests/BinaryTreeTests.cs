@@ -76,17 +76,19 @@ namespace DataStructures.Tests
 
         public void BreadthTravesalTest()
         {
-            
-            NumberBinaryTree myTree = new NumberBinaryTree();
-            myTree.Add(10);
-            myTree.Add(5);
-            myTree.Add(4);
-            myTree.Add(13);
-            int[] expected = new int[] { 10, 5, 13, 4 };
+            NumberBinaryTree newNode = new NumberBinaryTree();
+            newNode.Root = new BinaryTree<int>.Node(2);
+            newNode.Root.Left = new BinaryTree<int>.Node(1);
+            newNode.Root.Right = new BinaryTree<int>.Node(3);
 
-            List<int> actual = myTree.Breadth();
+            int[] expected = new int[]
+            {
+                2,
+                1,
+                3,
+            };
 
-            Assert.Equal(expected, actual);
+            Assert.Equal(expected, newNode.Breadth());
         }
     }
 
