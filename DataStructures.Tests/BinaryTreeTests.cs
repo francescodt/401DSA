@@ -71,6 +71,25 @@ namespace DataStructures.Tests
 
             Assert.Equal(expected, newNode.GetMax());
         }
+
+        [Fact]
+
+        public void BreadthTravesalTest()
+        {
+            NumberBinaryTree newNode = new NumberBinaryTree();
+            newNode.Root = new BinaryTree<int>.Node(2);
+            newNode.Root.Left = new BinaryTree<int>.Node(1);
+            newNode.Root.Right = new BinaryTree<int>.Node(3);
+
+            int[] expected = new int[]
+            {
+                2,
+                1,
+                3,
+            };
+
+            Assert.Equal(expected, newNode.Breadth());
+        }
     }
 
     
