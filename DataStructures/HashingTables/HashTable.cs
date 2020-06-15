@@ -67,6 +67,33 @@ namespace DataStructures.HashingTables
             }
         }
 
+        public bool HashExists(string key)
+        {
+            int index = HashCode(key);
+
+            if (Buckets[index] == null)
+            {
+                return false;
+            }
+            else
+            {
+                Node current = Buckets[index];
+                while (current != null)
+                {
+                    if (current.Key == key)
+                    {
+                        return true;
+                    }
+                    else
+                    {
+                        current = current.Next;
+                    }
+                }
+
+                return false;
+            }
+        }
+
 
         public static int HashCode(string key)
         {
