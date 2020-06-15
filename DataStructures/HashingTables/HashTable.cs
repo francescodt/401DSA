@@ -4,7 +4,7 @@ using System.Text;
 
 namespace DataStructures.HashingTables
 {
-    class HashTable
+    public class HashTable
     {
 
         public Node[] Buckets { get; set; }
@@ -13,6 +13,58 @@ namespace DataStructures.HashingTables
         {
             Buckets = new Node[buckets];
             BucketCount = buckets;
+        }
+
+
+        public void AddHash(string key, string value)
+        {
+            int hashTableLocation = HashCode(key);
+
+            if (Buckets[hashTableLocation] == null)
+            {
+                Node newNode = new Node(key, value);
+                Buckets[hashTableLocation] = newNode;
+            }
+            else
+            {
+                Node newNode = new Node(key, value);
+                Node current = Buckets[hashTableLocation];
+
+                while (current.Next != null)
+                {
+                    current = current.Next;
+                }
+
+                current.Next = newNode;
+            }
+        }
+
+        public string GetFromTable(string key)
+        {
+            int index = HashCode(key);
+
+            if (Buckets[index] == null)
+            {
+                return null;
+            }
+            else
+            {
+                Node current = Buckets[index];
+
+                while (current != null)
+                {
+                    if (current.Key == key)
+                    {
+                        return current.Value;
+                    }
+                    else
+                    {
+                        current = current.Next;
+                    }
+                }
+
+                return null;
+            }
         }
 
 
