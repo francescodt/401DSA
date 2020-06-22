@@ -1,10 +1,11 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Text;
 
 namespace DataStructures.HashingTables
 {
-    public class HashTable
+    public class HashTable 
     {
 
         public Node[] Buckets { get; set; }
