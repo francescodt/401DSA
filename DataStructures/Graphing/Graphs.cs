@@ -59,5 +59,38 @@ namespace DataStructures.Graphing
         {
             return Nodes.Keys.Count;
         }
+
+        public List<T> BreadthFirstTraversal(T value)
+        {
+            if (!Nodes.ContainsKey(value))
+            {
+                return null;
+            }
+
+            Dictionary<T, bool> visited = new Dictionary<T, bool>();
+            visited.Add(value, true); 
+
+            List<T> output = new List<T> { value };
+            Queue<T> breadthTraversal = new Queue<T>();
+
+            while (breadthTraversal.Count > 0)
+            {
+                var currentValue = breadthTraversal.Dequeue();
+                if (visited.ContainsKey(currentValue))
+                {
+                    continue;
+                }
+
+                visited.Add(currentValue, true);
+                output.Add(currentValue);
+
+                foreach (var edge in Nodes[value])
+                {
+                    breadthTraversal.Enqueue(edge.Key);
+                }
+            }
+
+            return output;
+        }
     }
 }
