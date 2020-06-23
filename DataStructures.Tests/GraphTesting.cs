@@ -68,5 +68,12 @@ namespace DataStructures.Tests
             Assert.Equal(5, newGraph.Size());
 
         }
+
+        [Fact]
+        public void BreadthDoesntNotWork()
+        {
+            Graph<int> newGraph = new Graph<int>();
+            Assert.Null(newGraph.BreadthFirstTraversal(2));
+        }
     }
 }
