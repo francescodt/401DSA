@@ -117,6 +117,23 @@ namespace DataStructures.HashingTables
             return hashIndex;
         }
 
+
+        public IEnumerator<string> GetEnumerator()
+        {
+            foreach (var bucket in Buckets)
+            {
+                Node current = bucket;
+
+                while (current != null)
+                {
+                    string result = $"{current.Key} {current.Value}";
+                    yield return result;
+                    current = current.Next;
+                }
+            }
+        }
+
+
         public class Node
         {
             public string Key { get; set; }

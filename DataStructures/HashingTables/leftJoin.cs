@@ -11,12 +11,12 @@ namespace DataStructures.HashingTables
     //        HashSet<string[]> leftHash = new HashSet<string[]>();
     //        HashSet<string[]> result = new HashSet<string[]>();
 
-    //        foreach (string[] word in left)
+    //        foreach (var word in left)
     //        {
     //            leftHash.Add(word.Split(','));
     //        }
 
-    //        foreach (string[] entry in left)
+    //        foreach (var entry in left)
     //        {
     //            if (right.HashExists(entry[0]))
     //            {
@@ -31,3 +31,4 @@ namespace DataStructures.HashingTables
     //    }
     //}
 }
+
