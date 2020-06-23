@@ -56,6 +56,17 @@ namespace DataStructures.Tests
         }
 
         [Fact]
-        
+        public void GettingSizedUp()
+        {
+            Graph<int> newGraph = new Graph<int>();
+            newGraph.AddNode(2);
+            newGraph.AddNode(4);
+            newGraph.AddNode(6);
+            newGraph.AddNode(8);
+            newGraph.AddNode(10);
+
+            Assert.Equal(5, newGraph.Size());
+
+        }
     }
 }
