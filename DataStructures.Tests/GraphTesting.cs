@@ -75,5 +75,27 @@ namespace DataStructures.Tests
             Graph<int> newGraph = new Graph<int>();
             Assert.Null(newGraph.BreadthFirstTraversal(2));
         }
+
+        //[Fact]
+        //public void ButDoesBreadthWork()
+        //{
+        //    Graph<int> newGraph = new Graph<int>();
+
+        //    newGraph.AddNode(1);
+        //    newGraph.AddNode(2);
+        //    newGraph.AddNode(3);
+        //    newGraph.AddNode(4);
+
+        //    newGraph.AddEdge(1, 2);
+        //    newGraph.AddEdge(1, 3);
+        //    newGraph.AddEdge(2, 4);
+        //    newGraph.AddEdge(3, 4);
+
+        //    int[] expected = new int[] { 1, 2, 3, 4 };
+
+        //    newGraph.BreadthFirstTraversal();
+
+        //    Assert.Equal(expected, );
+        //}
     }
 }
