@@ -27,5 +27,21 @@ namespace DataStructures.Tests
             Assert.Contains(2, newGraph.GetNodes());
 
         }
+
+        [Fact]
+        public void MultipleVerticiesAreEvenCooler()
+        {
+            Graph<int> newGraph = new Graph<int>();
+
+            newGraph.AddNode(1);
+            newGraph.AddNode(2);
+            newGraph.AddNode(3);
+
+
+            Assert.Contains(1, newGraph.GetNodes());
+            Assert.Contains(2, newGraph.GetNodes());
+            Assert.Contains(3, newGraph.GetNodes());
+
+        }
     }
 }
