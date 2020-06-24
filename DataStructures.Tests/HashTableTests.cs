@@ -29,10 +29,29 @@ namespace DataStructures.Tests
             Assert.True(newTable.HashExists("dog"));
         }
 
-        [Fact]
-        public void CanAddKeyValues()
+        [Theory]
+        [InlineData("")]
+        [InlineData(null)]
+        public void ArguementException(string key)
         {
-            HashTable newTable = new HashTable()
+            Assert.Throws<ArgumentException>(() =>
+            {
+                var result = HashTable.HashCode(key);
+            });
+        }
+
+        [Fact]
+        public void CanReturnNull()
+        {
+            HashTable newTable = new HashTable(100);
+            string newKey = "dog";
+            string newValue = "wally";
+
+            newTable.AddHash(newKey, newValue);
+
+            string result = newTable.GetFromTable("Ian");
+
+            Assert.Null(result);
         }
     }
 }
