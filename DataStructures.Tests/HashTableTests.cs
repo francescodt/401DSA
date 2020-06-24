@@ -53,5 +53,25 @@ namespace DataStructures.Tests
 
             Assert.Null(result);
         }
+
+        [Fact]
+        public void CollisionIsInevitible()
+        {
+            HashTable newTable = new HashTable(1000);
+            string newKeyOne = "Taco";
+            string newValueOne = "Delicious";
+
+            string newKeyTwo = "Cato";
+            string newValueTwo = "Cute";
+
+            newTable.AddHash(newKeyOne, newValueOne);
+            newTable.AddHash(newKeyTwo, newValueTwo);
+
+            string result = newTable.GetFromTable(newKeyOne);
+            string secondResult = newTable.GetFromTable(newKeyTwo);
+
+            Assert.Equal("Delicious", result);
+            Assert.Equal("Cute", secondResult);
+        }
     }
 }
